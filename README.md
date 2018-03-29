@@ -1,4 +1,4 @@
-# TheATeam
+# TheATeam Group Project
 Problem statement.
 Calorie manager application allows users to load a picture of the food 
 item that they keep track of. This webservice would assist with this process 
