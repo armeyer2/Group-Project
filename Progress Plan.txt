@@ -1,0 +1,5 @@
+1. Form Page
+2. Servlet
+3. API Class
+4. Make Tests
+5. AWS deployment
