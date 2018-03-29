@@ -7,8 +7,16 @@
   <version>1.0-SNAPSHOT</version>
   <name>TheATeam Maven Webapp</name>
   <url>http://maven.apache.org</url>
+  <build>
+    <finalName>TheATeam</finalName>
+  </build>
   <dependencies>
+    <!-- Dependency for jSoup -->
     <dependency>
+      <groupId>org.jsoup</groupId>
+      <artifactId>jsoup</artifactId>
+      <version>1.10.2</version>
+    </dependency>
     <!-- Dependency for lombok -->
     <dependency>
       <groupId>org.projectlombok</groupId>
@@ -81,15 +89,6 @@
       <groupId>jstl</groupId>
       <artifactId>jstl</artifactId>
       <version>1.2</version>
-    </dependency>```
-
-
-
-    <!-- Dependency for jSoup image search -->
-    <dependency>
-      <groupId>org.jsoup</groupId>
-      <artifactId>jsoup</artifactId>
-      <version>1.10.2</version>
     </dependency>
     <dependency>
       <groupId>junit</groupId>
@@ -98,7 +97,4 @@
       <scope>test</scope>
     </dependency>
   </dependencies>
-  <build>
-    <finalName>TheATeam</finalName>
-  </build>
 </project>
