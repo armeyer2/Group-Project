@@ -33,18 +33,18 @@ public class HTMLImageParser {
             Elements images = doc.select("img[src~=(?i)\\.(png|jpe?g|gif)]");
             for (Element image : images) {
 
-            // IMAGE SRC RETURNED
-            imgInfoArray.add(image.attr("src"));
-            imgInfoArray.add(image.attr("alt"));
+                // IMAGE SRC RETURNED
+                imgInfoArray.add(image.attr("src"));
+                imgInfoArray.add(image.attr("alt"));
 
-            logger.info("imgSrc: " + imgInfoArray.get(0)
-                    + "\nimgAlt: " + imgInfoArray.get(1));
+                logger.info("imgSrc: " + imgInfoArray.get(0)
+                        + "\nimgAlt: " + imgInfoArray.get(1));
 
 
-            logger.info(image.attr("src"));
-            logger.info("height : " + image.attr("height"));
-            logger.info("width : " + image.attr("width"));
-            logger.info("alt : " + image.attr("alt"));
+                logger.info(image.attr("src"));
+                logger.info("height : " + image.attr("height"));
+                logger.info("width : " + image.attr("width"));
+                logger.info("alt : " + image.attr("alt"));
 
             }
 
