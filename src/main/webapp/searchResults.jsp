@@ -10,7 +10,7 @@
 
 <html>
 <head>
-    <title>${Title}</title>
+
 </head>
 <body>
 <%-- TODO not sure if array is correct. --%>

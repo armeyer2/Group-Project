@@ -24,7 +24,7 @@ public class SearchServlet extends HttpServlet {
     HTMLImageParser imageParse = new HTMLImageParser();
     HTMLLinkParser linkParse = new HTMLLinkParser();
 
-    private String url = "/../webapp/searchResults.jsp";
+    private String url = "/searchResults.jsp";
 
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {

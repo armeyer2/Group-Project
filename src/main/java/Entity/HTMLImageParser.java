@@ -28,7 +28,7 @@ public class HTMLImageParser {
             // TODO change to only first image
             //get ONE image
             doc = Jsoup.connect("http://google.com").get();
-//            Elements image = doc.select("img[src~=(?i)\\.(png|jpe?g|gif)]");
+   //        Elements image = doc.select("img[src~=(?i)\\.(png|jpe?g|gif)]");
 
             Elements images = doc.select("img[src~=(?i)\\.(png|jpe?g|gif)]");
             for (Element image : images) {
