@@ -38,7 +38,7 @@ public class SearchServlet extends HttpServlet {
         imgInfo.add(imageParse.ImageSearch(googleSearch).get(1));
         // img href
 //        imgInfo.add(linkParse.LinkSearch(googleSearch));*/
-        String imgSrc = "https://www.google.com/"+imageParse.ImageSearch(googleSearch);
+        String imgSrc = imageParse.ImageSearch(googleSearch);
 
         HttpSession session = request.getSession();
         session.setAttribute("searchItem", googleSearch);
