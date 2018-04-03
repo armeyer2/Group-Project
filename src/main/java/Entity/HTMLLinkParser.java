@@ -16,7 +16,8 @@ public class HTMLLinkParser {
 
     private final Logger logger = LogManager.getLogger(this.getClass());
 
-    public void LinkSearch(String searchFor) {
+    public String LinkSearch(String searchFor) {
+        String imgLink = "";
         logger.info(searchFor + " passed to LinkParse");
 
         Document doc;
@@ -34,7 +35,7 @@ public class HTMLLinkParser {
 //            for (Element link : links) {
 
             // IMAGE LINK RETURNED
-            String imgLink = link.attr("href");
+            imgLink = link.attr("href");
             logger.info("imgLink: " + imgLink);
 
             // get the value from href attribute
@@ -51,11 +52,10 @@ public class HTMLLinkParser {
 //                System.out.println("text : " + link.text());
 
 //            }
-
         } catch (IOException e) {
             logger.error("Err in LinkParse... " + e);
         }
-
+        return imgLink;
     }
 
 }

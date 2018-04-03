@@ -6,6 +6,8 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+
 <html>
 <head>
     <title>${Title}</title>
@@ -13,6 +15,7 @@
 <body>
 
     <h2>Google searched for:</h2>
+    <a>${}</a>
 
     <h3>Link found:</h3>
     <a></a>

@@ -11,7 +11,9 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 import java.io.IOException;
+import java.util.ArrayList;
 
 
 @WebServlet(
@@ -22,21 +24,26 @@ public class SearchServlet extends HttpServlet {
     HTMLImageParser imageParse = new HTMLImageParser();
     HTMLLinkParser linkParse = new HTMLLinkParser();
 
-    private String imgLink;
-    private String imgSource;
+    private String url = "/../webapp/searchResults.jsp";
 
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         String googleSearch = request.getParameter("imageName");
-        searchForImage(googleSearch);
 
-        RequestDispatcher dispatcher = request.getRequestDispatcher("../webapp/searchResults.jsp");
+        ArrayList<String> imgInfo = new ArrayList<String>();
+
+        // img src
+        imgInfo.add(imageParse.ImageSearch(googleSearch).get(0));
+        // img alt
+        imgInfo.add(imageParse.ImageSearch(googleSearch).get(1));
+        // img href
+        imgInfo.add(linkParse.LinkSearch(googleSearch));
+
+        HttpSession session = request.getSession();
+        session.setAttribute("searchItem", googleSearch);
+        session.setAttribute("imgList", imgInfo);
+
+        RequestDispatcher dispatcher = getServletContext().getRequestDispatcher(url);
         dispatcher.forward(request, response);
-    }
-
-    private void searchForImage(String googleSearch) {
-        imageParse.ImageSearch(googleSearch);
-        linkParse.LinkSearch(googleSearch);
-
     }
 }

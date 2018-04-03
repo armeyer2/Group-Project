@@ -8,6 +8,7 @@ import org.jsoup.select.Elements;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import java.io.IOException;
+import java.util.ArrayList;
 
 /**
  * This class will parse google for the image returned from the image search
@@ -16,7 +17,9 @@ public class HTMLImageParser {
 
     private final Logger logger = LogManager.getLogger(this.getClass());
 
-    public void ImageSearch(String searchFor) {
+    public ArrayList<String> ImageSearch(String searchFor) {
+        // index 0 is src, index 1 is alt
+        ArrayList<String> imgInfoArray = new ArrayList<String>();
         logger.info(searchFor + " passed to ImageParse");
 
         Document doc;
@@ -31,24 +34,24 @@ public class HTMLImageParser {
 //            for (Element image : images) {
 
             // IMAGE SRC RETURNED
-            String imgSrc = image.attr("src");
-            String imgAlt = image.attr("alt");
+            imgInfoArray.add(image.attr("src"));
+            imgInfoArray.add(image.attr("alt"));
 
-            logger.info("imgSrc: " + imgSrc
-                    + "\nimgAlt: " + imgAlt);
+            logger.info("imgSrc: " + imgInfoArray.get(0)
+                    + "\nimgAlt: " + imgInfoArray.get(1));
 
 
-            System.out.println(image.attr("src"));
-            System.out.println("height : " + image.attr("height"));
-            System.out.println("width : " + image.attr("width"));
-            System.out.println("alt : " + image.attr("alt"));
+            logger.info(image.attr("src"));
+            logger.info("height : " + image.attr("height"));
+            logger.info("width : " + image.attr("width"));
+            logger.info("alt : " + image.attr("alt"));
 
 //            }
 
         } catch (IOException e) {
             logger.error("Err in ImageParse... " + e);
         }
-
+        return imgInfoArray;
     }
 
 
