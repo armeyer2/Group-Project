@@ -1,0 +1,9 @@
+1. Add the results and index page.
+2. Added the servlets
+3. Added the HTMLImageParser
+4. Got it to return the first google image.
+5. Got the custom url query
+
+todo
+6. Get the second image
+7. Display the results image
