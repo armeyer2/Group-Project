@@ -30,18 +30,19 @@ public class SearchServlet extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         String googleSearch = request.getParameter("imageName");
 
-        ArrayList<String> imgInfo = new ArrayList<String>();
+       /* ArrayList<String> imgInfo = new ArrayList<String>();
 
         // img src
         imgInfo.add(imageParse.ImageSearch(googleSearch).get(0));
         // img alt
         imgInfo.add(imageParse.ImageSearch(googleSearch).get(1));
         // img href
-//        imgInfo.add(linkParse.LinkSearch(googleSearch));
+//        imgInfo.add(linkParse.LinkSearch(googleSearch));*/
+        String imgSrc = imageParse.ImageSearch(googleSearch);
 
         HttpSession session = request.getSession();
         session.setAttribute("searchItem", googleSearch);
-        session.setAttribute("imgInfo", imgInfo);
+        session.setAttribute("imgSrc", imgSrc);
 
         RequestDispatcher dispatcher = getServletContext().getRequestDispatcher(url);
         dispatcher.forward(request, response);
