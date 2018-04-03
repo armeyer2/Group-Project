@@ -1,8 +1,11 @@
 <html>
+<head>
+    <title>${Title}</title>
+</head>
 <body>
-<form action="/servlet_name">
-    Search image: <br>
-    <input type="text" name="imageName" value=""><br>
+<form action="searchServlet" method="get">
+    Search for image: <br>
+    <input type="text" name="imageName" value="" required><br>
     <input type="submit" value="Submit">
 </form>
 </body>

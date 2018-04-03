@@ -9,15 +9,16 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
 
-@WebServlet(urlPatterns = "/index")
+@WebServlet(
+        name = "Search Page",
+        urlPatterns = "/index")
 
 public class Servlet extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
-
-        RequestDispatcher dispatcher = request.getRequestDispatcher("..webapp/index.jsp");
+        RequestDispatcher dispatcher = request.getRequestDispatcher("../webapp/index.jsp");
         dispatcher.forward(request, response);
     }
 }

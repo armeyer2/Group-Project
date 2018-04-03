@@ -1,5 +1,13 @@
 <html>
+<head>
+    <title>${Title}</title>
+</head>
 <body>
-<h2>Hello World!</h2>
+<form action="searchServlet" method="get">
+    Search for image: <br>
+    <input type="text" name="imageName" value="" required><br>
+    <input type="submit" value="Submit">
+</form>
 </body>
 </html>
+
