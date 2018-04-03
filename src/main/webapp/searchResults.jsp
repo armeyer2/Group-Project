@@ -13,15 +13,18 @@
     <title>${Title}</title>
 </head>
 <body>
-
+<%-- TODO not sure if array is correct. --%>
     <h2>Google searched for:</h2>
-    <a>${}</a>
+    <a>${searchItem}</a>
 
     <h3>Link found:</h3>
-    <a></a>
+    <%--<a>${imgList[2]}</a>--%>
 
-    <h3>Image found:<h3>
-    <img />
+    <h3>Image found:</h3>
+    <img src="${imgList[0]}"/>
+
+    <h3>Image Description:</h3>
+    <a>${imgList[1]}</a>
 
 </body>
 </html>

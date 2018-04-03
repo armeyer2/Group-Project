@@ -16,10 +16,7 @@ public class HTMLLinkParser {
 
     private final Logger logger = LogManager.getLogger(this.getClass());
 
-    public String LinkSearch(String searchFor) {
-        String imgLink = "";
-        logger.info(searchFor + " passed to LinkParse");
-
+    public void LinkSearch(String searchFor) {
         Document doc;
         try {
 
@@ -30,32 +27,63 @@ public class HTMLLinkParser {
             String title = doc.title();
             System.out.println("title : " + title);
 
-            // get ONE link
-            Elements link = doc.select("a[href]");
-//            for (Element link : links) {
+            // get all links
+            Elements links = doc.select("a[href]");
+            for (Element link : links) {
 
-            // IMAGE LINK RETURNED
-            imgLink = link.attr("href");
-            logger.info("imgLink: " + imgLink);
+                // get the value from href attribute
+                System.out.println("\nlink : " + link.attr("href"));
+                System.out.println("text : " + link.text());
 
-            // get the value from href attribute
-            System.out.println("\nlink : " + link.attr("href"));
-            System.out.println("text : " + link.text());
+            }
 
-
-                // get all links
-//            Elements links = doc.select("a[href]");
-//            for (Element link : links) {
-//
-//                // get the value from href attribute
-//                System.out.println("\nlink : " + link.attr("href"));
-//                System.out.println("text : " + link.text());
-
-//            }
         } catch (IOException e) {
-            logger.error("Err in LinkParse... " + e);
+            e.printStackTrace();
         }
-        return imgLink;
+
     }
 
 }
+
+//        String imgLink = "";
+//        logger.info(searchFor + " passed to LinkParse");
+//
+//        Document doc;
+//        try {
+//
+//            // need http protocol
+//            doc = Jsoup.connect("http://google.com").get();
+//
+//            // get page title
+//            String title = doc.title();
+//            System.out.println("title : " + title);
+//
+//            // get ONE link
+//            Elements link = doc.select("a[href]");
+////            for (Element link : links) {
+//
+//            // IMAGE LINK RETURNED
+//            imgLink = link.attr("href");
+//            logger.info("imgLink: " + imgLink);
+//
+//            // get the value from href attribute
+//            System.out.println("\nlink : " + link.attr("href"));
+//            System.out.println("text : " + link.text());
+//
+//
+//                // get all links
+////            Elements links = doc.select("a[href]");
+////            for (Element link : links) {
+////
+////                // get the value from href attribute
+////                System.out.println("\nlink : " + link.attr("href"));
+////                System.out.println("text : " + link.text());
+//
+////            }
+//        } catch (IOException e) {
+//            logger.error("Err in LinkParse... " + e);
+//        }
+//        return imgLink;
+//    }
+//
+//}

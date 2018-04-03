@@ -37,11 +37,11 @@ public class SearchServlet extends HttpServlet {
         // img alt
         imgInfo.add(imageParse.ImageSearch(googleSearch).get(1));
         // img href
-        imgInfo.add(linkParse.LinkSearch(googleSearch));
+//        imgInfo.add(linkParse.LinkSearch(googleSearch));
 
         HttpSession session = request.getSession();
         session.setAttribute("searchItem", googleSearch);
-        session.setAttribute("imgList", imgInfo);
+        session.setAttribute("imgInfo", imgInfo);
 
         RequestDispatcher dispatcher = getServletContext().getRequestDispatcher(url);
         dispatcher.forward(request, response);

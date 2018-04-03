@@ -28,10 +28,10 @@ public class HTMLImageParser {
             // TODO change to only first image
             //get ONE image
             doc = Jsoup.connect("http://google.com").get();
-            Elements image = doc.select("img[src~=(?i)\\.(png|jpe?g|gif)]");
+//            Elements image = doc.select("img[src~=(?i)\\.(png|jpe?g|gif)]");
 
-//            Elements images = doc.select("img[src~=(?i)\\.(png|jpe?g|gif)]");
-//            for (Element image : images) {
+            Elements images = doc.select("img[src~=(?i)\\.(png|jpe?g|gif)]");
+            for (Element image : images) {
 
             // IMAGE SRC RETURNED
             imgInfoArray.add(image.attr("src"));
@@ -46,7 +46,7 @@ public class HTMLImageParser {
             logger.info("width : " + image.attr("width"));
             logger.info("alt : " + image.attr("alt"));
 
-//            }
+            }
 
         } catch (IOException e) {
             logger.error("Err in ImageParse... " + e);
