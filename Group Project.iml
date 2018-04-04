@@ -30,6 +30,9 @@
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" name="org.jsoup:jsoup:1.10.2" level="project" />
     <orderEntry type="library" name="Maven: org.jsoup:jsoup:1.8.3" level="project" />
+    <orderEntry type="library" name="Maven: xml-apis:xml-apis:1.0.b2" level="project" />
+    <orderEntry type="library" name="Maven: com.googlecode.json-simple:json-simple:1.1.1" level="project" />
+    <orderEntry type="library" name="Maven: org.jsoup:jsoup:1.8.3" level="project" />
     <orderEntry type="library" scope="PROVIDED" name="Maven: org.projectlombok:lombok:1.16.16" level="project" />
     <orderEntry type="library" scope="TEST" name="Maven: org.junit.jupiter:junit-jupiter-engine:5.0.0" level="project" />
     <orderEntry type="library" scope="TEST" name="Maven: org.apiguardian:apiguardian-api:1.0.0" level="project" />
