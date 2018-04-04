@@ -13,18 +13,20 @@
 
 </head>
 <body>
-<%-- TODO not sure if array is correct. --%>
-<h2>Google searched for:</h2>
-<a>${searchItem}</a>
+    <%-- TODO not sure if array is correct. --%>
+    <h2>Google searched for:</h2>
+    <a>${searchItem}</a>
 
-<h3>Link found:</h3>
-<%--<a>${imgList[2]}</a>--%>
+    <h3>Link found:</h3>
+    <%--<a>${imgList[2]}</a>--%>
 
-<h3>Image found:</h3>
-<img src="${imgSrc}"/>
+    <h3>Image found:</h3>
+    <img src="${imgSrc}"/>
 
-<h3>Image Description:</h3>
-<a>${imgSrc}</a>
+    <h3>Image Description:</h3>
+    <a>Coming soon...?${imgSrc}</a>
 
+    <br />
+    <a href="index" class="button">Home</a>
 </body>
 </html>

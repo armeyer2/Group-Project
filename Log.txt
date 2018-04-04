@@ -1,2 +1,3 @@
 | 4/3/18 | AG - Setting up src directories. Adding to servlet and jsp | 2 |  |
 Aaron M & Alex - Got the image response to return a successful url of the first image.
+AG - working on getting correct image src to show up in results.jsp

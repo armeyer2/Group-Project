@@ -7,8 +7,11 @@ import org.jsoup.select.Elements;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+
 import java.io.IOException;
-import java.util.ArrayList;
+
+import static javax.ws.rs.core.HttpHeaders.USER_AGENT;
+
 
 /**
  * This class will parse google for the image returned from the image search
@@ -18,45 +21,44 @@ public class HTMLImageParser {
     private final Logger logger = LogManager.getLogger(this.getClass());
 
     public String ImageSearch(String searchFor) {
-        // index 0 is src, index 1 is alt
-        //ArrayList<String> imgInfoArray = new ArrayList<String>();
         logger.info(searchFor + " passed to ImageParse");
         String imgSrc = null;
+
 
         Document doc;
         try {
 
-            // TODO change to only first image
-            //get ONE image
-            doc = Jsoup.connect("https://www.google.com/search?hl=en&site=imghp&tbm=isch&source=hp&q="+searchFor).get();
-            //        Elements image = doc.select("img[src~=(?i)\\.(png|jpe?g|gif)]");
+            //get all images
+            doc = Jsoup.connect("https://www.google.com/search?hl=en&site=imghp&tbm=isch&source=hp&q="+searchFor).userAgent(USER_AGENT).get();
+            Elements elements = doc.getElementsByClass("img.rg_ic.rg_i");
 
+//            imgSrc = elements.get(0).attr("src");
             Elements images = doc.select("img[src~=(?i)\\.(png|jpe?g|gif)]");
-
 
             for (Element image : images) {
 
-                // IMAGE SRC RETURNED
-                imgSrc = image.attr("src");
-                // imgInfoArray.add(image.attr("alt"));
+                System.out.println("\nsrc : " + image.attr("src"));
+                System.out.println("height : " + image.attr("height"));
+                System.out.println("width : " + image.attr("width"));
+                System.out.println("alt : " + image.attr("alt"));
 
-                /*logger.info("imgSrc: " + imgInfoArray.get(0)
-                        + "\nimgAlt: " + imgInfoArray.get(1));
-
-
-                logger.info(image.attr("src"));
-                logger.info("height : " + image.attr("height"));
-                logger.info("width : " + image.attr("width"));
-                logger.info("alt : " + image.attr("alt"));*/
-
-                break;
             }
+            //            for (Element image : images) {
+//            Element el = images.get();
+//            imgSrc = el.attr("src");
+//            System.out.println("\nsrc : " + elements.get(0).attr("src"));
+//            System.out.println("height : " + elements.get(0).attr("height"));
+//            System.out.println("width : " + elements.get(0).attr("width"));
+//            System.out.println("alt : " + elements.get(0).attr("alt"));
+//            System.out.println("\nsrc : " + el.attr("src"));
+//            System.out.println("height : " + el.attr("height"));
+//            System.out.println("width : " + el.attr("width"));
+//            System.out.println("alt : " + el.attr("alt"));
+
 
         } catch (IOException e) {
-            logger.error("Err in ImageParse... " + e);
+            e.printStackTrace();
         }
         return imgSrc;
     }
-
-
 }
