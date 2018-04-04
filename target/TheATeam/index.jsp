@@ -4,6 +4,7 @@
     <title>${Title}</title>
 </head>
 <body>
+<img src="images/ateam.png" height="200px"/>
 <form action="searchServlet" method="get">
     Search for image: <br>
     <input type="text" name="imageName" value="" required><br>

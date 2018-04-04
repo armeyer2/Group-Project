@@ -28,35 +28,15 @@ public class HTMLImageParser {
         Document doc;
         try {
 
-            //get all images
             doc = Jsoup.connect("https://www.google.com/search?hl=en&site=imghp&tbm=isch&source=hp&q="+searchFor).userAgent(USER_AGENT).get();
-//            Elements elements = doc.getElementsByClass("img.rg_ic.rg_i");
-//
-////            imgSrc = elements.get(0).attr("src");
-//            Elements images = doc.select("img[src~=(?i)\\.(png|jpe?g|gif)]");
 
             Element image = doc.select("img").first();
             imgSrc = image.absUrl("src");
-//            for (Element image : images) {
 
                 System.out.println("\nsrc : " + image.attr("src"));
                 System.out.println("height : " + image.attr("height"));
                 System.out.println("width : " + image.attr("width"));
                 System.out.println("alt : " + image.attr("alt"));
-
-
-            //            for (Element image : images) {
-//            Element el = images.get();
-//            imgSrc = el.attr("src");
-//            System.out.println("\nsrc : " + elements.get(0).attr("src"));
-//            System.out.println("height : " + elements.get(0).attr("height"));
-//            System.out.println("width : " + elements.get(0).attr("width"));
-//            System.out.println("alt : " + elements.get(0).attr("alt"));
-//            System.out.println("\nsrc : " + el.attr("src"));
-//            System.out.println("height : " + el.attr("height"));
-//            System.out.println("width : " + el.attr("width"));
-//            System.out.println("alt : " + el.attr("alt"));
-
 
         } catch (IOException e) {
             e.printStackTrace();

@@ -13,20 +13,22 @@
 
 </head>
 <body>
-    <%-- TODO not sure if array is correct. --%>
     <h2>Google searched for:</h2>
     <a>${searchItem}</a>
 
     <h3>Link found:</h3>
-    <%--<a>${imgList[2]}</a>--%>
+    <a href="https://www.google.com/search?hl=en&site=imghp&tbm=isch&source=hp&q=${searchItem}">Google Image Search</a>
 
     <h3>Image found:</h3>
-    <img src="${imgSrc}"/>
+    <img src="${imgSrc}" width="15%"/>
 
     <h3>Image Description:</h3>
-    <a>Coming soon...?${imgSrc}</a>
+    <p>v2.0?</p>
 
     <br />
-    <a href="index" class="button">Home</a>
+    <a href="/index.jsp" class="button">Home</a>
+    <br />
+    <br />
+    <img src="images/a_team_20.jpg" height="200px"/>
 </body>
 </html>
