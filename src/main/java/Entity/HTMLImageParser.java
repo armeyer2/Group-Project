@@ -30,19 +30,21 @@ public class HTMLImageParser {
 
             //get all images
             doc = Jsoup.connect("https://www.google.com/search?hl=en&site=imghp&tbm=isch&source=hp&q="+searchFor).userAgent(USER_AGENT).get();
-            Elements elements = doc.getElementsByClass("img.rg_ic.rg_i");
+//            Elements elements = doc.getElementsByClass("img.rg_ic.rg_i");
+//
+////            imgSrc = elements.get(0).attr("src");
+//            Elements images = doc.select("img[src~=(?i)\\.(png|jpe?g|gif)]");
 
-//            imgSrc = elements.get(0).attr("src");
-            Elements images = doc.select("img[src~=(?i)\\.(png|jpe?g|gif)]");
-
-            for (Element image : images) {
+            Element image = doc.select("img").first();
+            imgSrc = image.absUrl("src");
+//            for (Element image : images) {
 
                 System.out.println("\nsrc : " + image.attr("src"));
                 System.out.println("height : " + image.attr("height"));
                 System.out.println("width : " + image.attr("width"));
                 System.out.println("alt : " + image.attr("alt"));
 
-            }
+
             //            for (Element image : images) {
 //            Element el = images.get();
 //            imgSrc = el.attr("src");
