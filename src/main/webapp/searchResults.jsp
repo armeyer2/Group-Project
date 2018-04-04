@@ -20,7 +20,7 @@
     <a href="https://www.google.com/search?hl=en&site=imghp&tbm=isch&source=hp&q=${searchItem}">Google Image Search</a>
 
     <h3>Image found:</h3>
-    <img src="${imgSrc}" width="15%"/>
+    <img src="${imgSrc}"/>
 
     <h3>Image Description:</h3>
     <p>v2.0?</p>
