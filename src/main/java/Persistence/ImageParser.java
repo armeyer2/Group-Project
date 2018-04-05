@@ -1,20 +1,18 @@
 package Persistence;
+
 import Entity.HTMLImageParser;
-import org.jsoup.Connection;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
 
-import javax.ws.rs.*;
-import javax.ws.rs.core.MediaType;
+import javax.ws.rs.GET;
+import javax.ws.rs.Path;
+import javax.ws.rs.PathParam;
+import javax.ws.rs.Produces;
 import javax.ws.rs.core.Response;
-import sun.plugin.util;
 import java.io.IOException;
 
-
-
 import static javax.ws.rs.core.HttpHeaders.USER_AGENT;
-import static sun.plugin.util.ProgressMonitor.get;
 
 @Path("/image")
 public class ImageParser {
@@ -23,7 +21,7 @@ public class ImageParser {
     String imgSrc;
     @GET
     @Path("/{param}")
-    @Produces(MediaType.APPLICATION_JSON)
+    @Produces("application/json")
     public Response getImages(@PathParam("param") String msg) throws IOException {
         doc = Jsoup.connect("https://www.google.com/search?hl=en&site=imghp&tbm=isch&source=hp&q="+msg).userAgent(USER_AGENT).get();
         HTMLImageParser htmlImageParser = new HTMLImageParser();
@@ -32,9 +30,9 @@ public class ImageParser {
         imgSrc = image.absUrl("src");
 
 
-        //Document doc = Jsoup.connect(url).get();
-        //return Response.ok(doc.body()).build();
-        return Response.ok(imgSrc).build();
+        return Response.status(200).entity(imgSrc).build();
 
     }
+
+
 }
