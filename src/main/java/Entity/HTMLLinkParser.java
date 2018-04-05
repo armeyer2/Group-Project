@@ -25,17 +25,17 @@ public class HTMLLinkParser {
 
             // get page title
             String title = doc.title();
-            System.out.println("title : " + title);
+            logger.info("title : " + title);
 
             // get all links
             Elements links = doc.select("a[href]");
-            for (Element link : links) {
+            /**for (Element link : links) {
 
                 // get the value from href attribute
-                System.out.println("\nlink : " + link.attr("href"));
-                System.out.println("text : " + link.text());
+                logger.info("\nlink : " + link.attr("href"));
+                logger.info("text : " + link.text());
 
-            }
+            }*/
 
         } catch (IOException e) {
             e.printStackTrace();

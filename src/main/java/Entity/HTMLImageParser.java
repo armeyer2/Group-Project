@@ -24,7 +24,6 @@ public class HTMLImageParser {
         logger.info(searchFor + " passed to ImageParse");
         String imgSrc = null;
 
-
         Document doc;
         try {
 
@@ -33,10 +32,10 @@ public class HTMLImageParser {
             Element image = doc.select("img").first();
             imgSrc = image.absUrl("src");
 
-                System.out.println("\nsrc : " + image.attr("src"));
-                System.out.println("height : " + image.attr("height"));
-                System.out.println("width : " + image.attr("width"));
-                System.out.println("alt : " + image.attr("alt"));
+                logger.info("\nsrc : " + image.attr("src"));
+                logger.info("height : " + image.attr("height"));
+                logger.info("width : " + image.attr("width"));
+                logger.info("alt : " + image.attr("alt"));
 
         } catch (IOException e) {
             e.printStackTrace();
