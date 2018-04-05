@@ -29,8 +29,6 @@ public class ImageParserTest {
         searchFor = "strawberry";
         Element element = doc.select("img").first();
         assertEquals("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTF7EHfslQHj393Ro_JA52iDZ7xPYhKKM9c1QuRDlmuETNomzP_lw5kyEI", imageParser.ImageSearch(searchFor));
-
-
     }
 
 }
