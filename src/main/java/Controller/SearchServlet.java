@@ -19,7 +19,7 @@ import java.io.IOException;
 
 public class SearchServlet extends HttpServlet {
     HTMLImageParser imageParse = new HTMLImageParser();
-    HTMLLinkParser linkParse = new HTMLLinkParser();
+
 
     private String url = "/searchResults.jsp";
 
