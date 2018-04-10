@@ -1,6 +1,6 @@
 package Controller;
 
-import Entity.*;
+import Persistence.HTMLImageParser;
 
 
 import javax.servlet.RequestDispatcher;

@@ -1,5 +1,6 @@
 package Entity;
 
+import Persistence.HTMLImageParser;
 import org.jsoup.Jsoup;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;

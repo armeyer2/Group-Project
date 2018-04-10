@@ -1,4 +1,4 @@
-package Entity;
+package Persistence;
 
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;

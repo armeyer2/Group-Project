@@ -1,11 +1,9 @@
-package Persistence;
+package Controller;
 
-import Entity.HTMLImageParser;
+import Persistence.HTMLImageParser;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.SerializationFeature;
-import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
-import org.jsoup.nodes.Element;
 
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;
@@ -16,8 +14,6 @@ import java.io.IOException;
 import java.util.Arrays;
 import java.util.HashSet;
 import java.util.Set;
-
-import static javax.ws.rs.core.HttpHeaders.USER_AGENT;
 
 @Path("/image")
 public class ImageParser {
