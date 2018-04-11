@@ -43,4 +43,25 @@ public class ImageParser {
         return Response.status(200).entity(arrayToJson).build();
 
     }
+
+    @GET
+    @Path("multiple/{param}")
+    @Produces("application/json")
+    public Response getMultipleImages(@PathParam("param") String msg) throws IOException {
+
+        //instantiate the parser class
+        HTMLImageParser htmlImageParser = new HTMLImageParser();
+
+        List<String> imgSrc = htmlImageParser.MultipleImageSearch(msg);
+
+
+        ObjectMapper objectMapper = new ObjectMapper();
+
+        objectMapper.enable(SerializationFeature.INDENT_OUTPUT);
+
+        String arrayToJson = objectMapper.writeValueAsString(imgSrc);
+
+        return Response.status(200).entity(arrayToJson).build();
+
+    }
 }
