@@ -22,6 +22,14 @@
     <div class="jumbotron" align="center">
         <img class="img-responsive img-rounded" src="images/ateam_header2.png">
     </div>
+    <h2>Google searched for:</h2>
+    <a>${searchItem}</a>
+
+    <h3>Link found:</h3>
+    <a href="https://www.google.com/search?hl=en&site=imghp&tbm=isch&source=hp&q=${searchItem}">Google Image Search</a>
+
+    <h3>Image found:</h3>
+    <img src="${imgSrc}"/>
 
     <div>
         <h2>Google searched for: <small>${searchItem}</small></h2>
