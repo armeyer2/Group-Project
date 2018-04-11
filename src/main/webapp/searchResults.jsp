@@ -22,7 +22,6 @@
     <div class="jumbotron" align="center">
         <img class="img-responsive img-rounded" src="images/ateam_header2.png">
     </div>
-
     <div>
         <h2>Google searched for: <small>${searchItem}</small></h2>
     </div>

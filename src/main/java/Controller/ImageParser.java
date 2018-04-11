@@ -1,6 +1,7 @@
 package Controller;
 
 import Entity.HTMLImageParser;
+
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.SerializationFeature;
 
@@ -42,6 +43,4 @@ public class ImageParser {
         return Response.status(200).entity(arrayToJson).build();
 
     }
-
-
 }
