@@ -1,4 +1,4 @@
-package Persistence;
+package Entity;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import org.jsoup.Jsoup;

@@ -1,6 +1,6 @@
 package Controller;
 
-import Persistence.HTMLImageParser;
+import Entity.HTMLImageParser;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.SerializationFeature;
 
