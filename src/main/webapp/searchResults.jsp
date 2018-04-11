@@ -47,7 +47,7 @@
     <footer class="footer bg-primary" >
         <span class="align-middle">
             <div class="col-sm-6" align="center">
-                <a href="/index" class="btn btn-secondary btn-lg">
+                <a href="index.jsp" class="btn btn-secondary btn-lg">
                     <span class="glyphicon glyphicon-home"></span> Home
                 </a>
             </div>

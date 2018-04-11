@@ -31,7 +31,6 @@
     <orderEntry type="library" name="org.jsoup:jsoup:1.10.2" level="project" />
     <orderEntry type="library" name="Maven: xml-apis:xml-apis:1.0.b2" level="project" />
     <orderEntry type="library" name="Maven: xml-apis:xml-apis:1.0.b2" level="project" />
-    <orderEntry type="library" name="Maven: com.fasterxml.jackson.core:jackson-core:2.8.3" level="project" />
     <orderEntry type="library" name="Maven: com.netflix.awsobjectmapper:awsobjectmapper:1.11.49" level="project" />
     <orderEntry type="library" scope="RUNTIME" name="Maven: com.amazonaws:aws-java-sdk:1.11.49" level="project" />
     <orderEntry type="library" scope="RUNTIME" name="Maven: com.amazonaws:aws-java-sdk-support:1.11.49" level="project" />
@@ -115,9 +114,7 @@
     <orderEntry type="library" scope="RUNTIME" name="Maven: joda-time:joda-time:2.8.1" level="project" />
     <orderEntry type="library" scope="RUNTIME" name="Maven: com.amazonaws:aws-java-sdk-models:1.11.49" level="project" />
     <orderEntry type="library" scope="RUNTIME" name="Maven: com.amazonaws:aws-java-sdk-swf-libraries:1.11.22" level="project" />
-    <orderEntry type="library" name="Maven: com.fasterxml.jackson.core:jackson-databind:2.8.3" level="project" />
-    <orderEntry type="library" name="Maven: com.fasterxml.jackson.core:jackson-annotations:2.8.0" level="project" />
-    <orderEntry type="library" name="Maven: com.fasterxml.jackson.core:jackson-core:2.8.3" level="project" />
+    <orderEntry type="library" name="Maven: com.fasterxml.jackson.core:jackson-annotations:2.8.3" level="project" />
     <orderEntry type="library" name="Maven: org.jsoup:jsoup:1.10.2" level="project" />
     <orderEntry type="library" scope="PROVIDED" name="Maven: org.projectlombok:lombok:1.16.16" level="project" />
     <orderEntry type="library" scope="TEST" name="Maven: org.junit.jupiter:junit-jupiter-engine:5.0.0" level="project" />
