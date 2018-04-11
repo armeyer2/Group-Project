@@ -22,8 +22,8 @@
     <h3>Image found:</h3>
     <img src="${imgSrc}"/>
 
-    <h3>Image Description:</h3>
-    <p>v2.0?</p>
+
+
 
     <br />
     <a href="/index.jsp" class="button">Home</a>

@@ -3,7 +3,6 @@ package Controller;
 import Persistence.HTMLImageParser;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.SerializationFeature;
-import org.jsoup.nodes.Document;
 
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;
@@ -11,31 +10,22 @@ import javax.ws.rs.PathParam;
 import javax.ws.rs.Produces;
 import javax.ws.rs.core.Response;
 import java.io.IOException;
-import java.util.Arrays;
-import java.util.HashSet;
-import java.util.Set;
+import java.util.*;
 
+/**
+ * This is the API class that user the HTMLImageParser
+ * to return a valid json that holds searchTerm and a link to the image
+ */
 @Path("/image")
 public class ImageParser {
-
-    Document doc;
-    String imgSrc;
-
 
     @GET
     @Path("/{param}")
     @Produces("application/json")
     public Response getImages(@PathParam("param") String msg) throws IOException {
 
-        //doc = Jsoup.connect("https://www.google.com/search?hl=en&site=imghp&tbm=isch&source=hp&q="+msg).userAgent(USER_AGENT).get();
-
-
+        //instantiate the parser class
         HTMLImageParser htmlImageParser = new HTMLImageParser();
-
-        //Element image = doc.select("img").first();
-
-        //imgSrc = image.absUrl("src");
-
 
         String imgSrc = htmlImageParser.ImageSearch(msg);
 
@@ -51,12 +41,7 @@ public class ImageParser {
 
         return Response.status(200).entity(arrayToJson).build();
 
-
     }
 
 
-
 }
-/** String googleSearch = request.getParameter("imageName");
-
- String imgSrc = imageParse.ImageSearch(googleSearch);*/
