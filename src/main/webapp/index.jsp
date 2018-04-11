@@ -11,7 +11,8 @@
 <body>
 <div class="container">
     <div class="jumbotron">
-    <img src="images/ateam.png" height="200px"/>
+        <img class="img-responsive img-rounded" src="images/ateam_header.png" align="center"/>
+        <%--<img src="images/50-thickbox_default.jpg" align="center">--%>
     </div>
     <form action="searchServlet" method="get">
         <div class="form-inline">
