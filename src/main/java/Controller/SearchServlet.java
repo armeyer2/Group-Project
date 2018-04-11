@@ -11,6 +11,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import java.io.IOException;
+import java.util.List;
 
 
 @WebServlet(
@@ -26,11 +27,13 @@ public class SearchServlet extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         String googleSearch = request.getParameter("imageName");
 
+        List<String> imgArraySrc = imageParse.MultipleImageSearch(googleSearch);
         String imgSrc = imageParse.ImageSearch(googleSearch);
 
 
         HttpSession session = request.getSession();
         session.setAttribute("searchItem", googleSearch);
+        session.setAttribute("imgArraySrc", imgArraySrc);
         session.setAttribute("imgSrc", imgSrc);
 
 

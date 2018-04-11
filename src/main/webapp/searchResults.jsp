@@ -36,9 +36,18 @@
         </h3>
     </div>
     <div>
-        <h3>Image found:</h3>
+        <h3>Primary Image found:</h3>
         <img src="${imgSrc}"/>
     </div>
+    <div>
+        <h4>Other Results</h4>
+        <img src="${imgArraySrc[2]}"/>
+        <img src="${imgArraySrc[3]}"/>
+        <img src="${imgArraySrc[4]}"/>
+        <img src="${imgArraySrc[5]}"/>
+    </div>
+
+
     <div>
         <h3>Image Description:</h3>
         <p><small>v2.0?</small></p>
