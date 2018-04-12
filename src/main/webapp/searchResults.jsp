@@ -47,11 +47,6 @@
         <img src="${imgArraySrc[5]}"/>
     </div>
 
-
-    <div>
-        <h3>Image Description:</h3>
-        <p><small>v2.0?</small></p>
-    </div>
     <hr />
     <footer class="footer bg-primary" >
         <span class="align-middle">
