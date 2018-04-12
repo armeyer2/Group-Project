@@ -8,3 +8,4 @@
 | 4/7/18 | AG | wasted time "prettying up" the pages rather than doing actual work | 1.5 |
 | 4/11/18 | AG | fixed merge conflicts... slowly... but got it done. Program functional |  |
 | 4/11/18 | Aaron M | Added an api method to return many links, you can find it at /images/multiple/{param} | 3 |
+| 4/11/18 | Alex| Added test to test the new method that Aaron M added | 1 |
