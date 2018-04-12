@@ -20,4 +20,4 @@ Default picture for the item would be loaded from Google search engine.
 ### Design
 * [Screen Design](DesignDocuments/Screens.md)
 ### [Project Plan](ProgressPlan.txt)
-### [Development Time Log](Log.txt)
+### [Development Time Log](Log.md)
