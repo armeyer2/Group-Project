@@ -1,4 +1,7 @@
+# Time Log
+
 | Date | Name | Task Description/Fun Comments | Est. Time |
+|------|------|-------|-------|
 | 3/29/18 | All | Worked through our initial plan and got github setup | 2 |
 | 4/3/18 | AG | Setting up src directories. Adding to servlet and jsp. | 2 |
 | 4/3/18 | Aaron M & Alex | Got the image response to return a successful url of the first image. | 2 |
